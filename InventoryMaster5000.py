@@ -14,11 +14,11 @@ spinner.stop()
 
 #connect to database
 print("Which database do you want to connect to?")
-db_choice = input("1. Live DB on //FS1US/BNA \n2. Test DB on //FS1US/BNA.\n")
+db_choice = input("1. Live DB \n2. Test DB\n")
 if db_choice == "1":
-    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=\\fs1us\bna\Departments\Information Technology\Database\ITDatabase.accdb')
+    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=<DB NAME HERE>')
 elif db_choice == "2":
-    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=\\fs1us\bna\Departments\Information Technology\Database\TestITDatabase.accdb')
+    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=<DB NAME HERE>')
 cursor = conn.cursor()
 
 while True:
